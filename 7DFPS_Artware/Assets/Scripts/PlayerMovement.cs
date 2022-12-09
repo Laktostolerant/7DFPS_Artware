@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //XD
-    public float walkingSpeed = 4f;
-    public float runningSpeed = 7f;
+    float walkingSpeed;
+    float runningSpeed;
     public Camera playerCamera;
     public float lookSensitivity = 2.0f;
     public float lookXLimit = 45.0f;
@@ -38,39 +38,26 @@ public class PlayerMovement : MonoBehaviour
             characterController.Move(new Vector3(0, -0.08f, 0));
 
         bool isCrouching = (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C));
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        bool isAiming = Input.GetKey(KeyCode.Mouse1);
+
         if (isCrouching)
-        {
-            characterController.height = 1;
-            walkingSpeed = 2f;
-            runningSpeed = 3f;
-            playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-        }
+            Crouch(1, 2, 3, 0.5f);
         else if(!isCrouching && !Physics.Raycast(transform.position, Vector3.up, out hit, 1.4f))
-        {
-            characterController.height = 2;
-            walkingSpeed = 4f;
-            runningSpeed = 7f;
-            playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.85f, transform.position.z);
-        }
+            Crouch(2, 4, 7, 0.85f);
 
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift); 
-        bool isAiming = Input.GetKey(KeyCode.Mouse1);
         float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
-        float movementDirectionY = moveDirection.y;
+        
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        moveDirection.y = movementDirectionY;
-
-        // Move the controller
+        //PHYSICAL MOVE
         characterController.Move(moveDirection * Time.deltaTime);
 
-        // Player and Camera rotation
         if (canMove)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSensitivity;
@@ -87,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             if(!isRunning && isAiming)
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 30, 0.5f));
 
-            if (!isAiming && !isRunning)
+            if (!isRunning && !isAiming)
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 60, 0.25f));
         }
     }
@@ -104,5 +91,13 @@ public class PlayerMovement : MonoBehaviour
             targetCamera.fieldOfView = Mathf.Lerp(targetCamera.fieldOfView, toFOV, fOVTime);
             yield return null;
         }
+    }
+
+    void Crouch(int height, int walk, int run, float heightOffset)
+    {
+        characterController.height = height;
+        walkingSpeed = walk;
+        runningSpeed = run;
+        playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + heightOffset, transform.position.z);
     }
 }
