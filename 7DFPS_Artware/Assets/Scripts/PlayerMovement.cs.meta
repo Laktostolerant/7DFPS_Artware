@@ -3,7 +3,10 @@ guid: d8ea129e8b23f7d4dab8c2dab9ef6fa6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletHole: {fileID: 6094075673278635215, guid: 716cd40d986421440a9b457911207d97,
+      type: 3}
+  - playerCamera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
