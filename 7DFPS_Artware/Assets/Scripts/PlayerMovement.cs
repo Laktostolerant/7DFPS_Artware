@@ -36,12 +36,28 @@ public class PlayerMovement : MonoBehaviour
         if (!Physics.Raycast(transform.position, Vector3.down, out hit, 0.01f))
             characterController.Move(new Vector3(0, -0.08f, 0));
 
+        bool isCrouching = (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C));
+        if (isCrouching)
+        {
+            characterController.height = 1;
+            walkingSpeed = 2f;
+            runningSpeed = 3f;
+            playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        }
+        else if(!isCrouching && !Physics.Raycast(transform.position, Vector3.up, out hit, 1.4f))
+        {
+            characterController.height = 2;
+            walkingSpeed = 4f;
+            runningSpeed = 7f;
+            playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + 0.85f, transform.position.z);
+        }
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        bool isRunning = Input.GetKey(KeyCode.LeftShift); 
         bool isAiming = Input.GetKey(KeyCode.Mouse1);
         float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
@@ -65,19 +81,13 @@ public class PlayerMovement : MonoBehaviour
                 StopCoroutine(fovCoroutine);
 
             if (isRunning && moveDirection.x != 0 && moveDirection.z != 0)
-            {
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 80, 0.5f));
-            }
 
             if(!isRunning && isAiming)
-            {
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 30, 0.5f));
-            }
 
             if (!isAiming && !isRunning)
-            {
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 60, 0.25f));
-            }
         }
     }
 
