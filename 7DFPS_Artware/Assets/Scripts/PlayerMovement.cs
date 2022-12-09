@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //XD
+    [SerializeField] GameObject bulletHole;
+    [SerializeField] private LayerMask bulletLayerMask;
+
     float walkingSpeed;
     float runningSpeed;
     public Camera playerCamera;
@@ -40,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
         bool isCrouching = (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C));
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         bool isAiming = Input.GetKey(KeyCode.Mouse1);
+        bool isShooting = Input.GetKey(KeyCode.Mouse0);
+
+        Vector3 rayOrigin = Camera.main.transform.position;
 
         if (isCrouching)
             Crouch(1, 2, 3, 0.5f);
@@ -76,6 +81,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (!isRunning && !isAiming)
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 60, 0.25f));
+
+            if (isShooting && Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, 10f, bulletLayerMask))
+                Shoot(hit);
         }
     }
 
@@ -99,5 +107,10 @@ public class PlayerMovement : MonoBehaviour
         walkingSpeed = walk;
         runningSpeed = run;
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + heightOffset, transform.position.z);
+    }
+
+    void Shoot(RaycastHit target)
+    {
+        Instantiate(bulletHole, target.point, Quaternion.LookRotation(-target.normal));
     }
 }
