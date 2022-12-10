@@ -23,6 +23,7 @@ public class PickUpWeapons : MonoBehaviour
     {
         if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E))
         {
+            //Destroy(gunOnGround);
             gunOnGround.SetActive(false);
             infoText.SetActive(false);
             pickedUpWeapon = true;
