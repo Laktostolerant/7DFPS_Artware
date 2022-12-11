@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponScript : MonoBehaviour
 {
@@ -12,42 +13,41 @@ public class WeaponScript : MonoBehaviour
     
     [SerializeField] int ammoCapacity;
     [SerializeField] int currentAmmoInClip;
-    [SerializeField] int ammoCarriedByPlayer;
+    public static int ammoCarriedByPlayer = 30;
     [SerializeField] float reloadTime;
     bool isReloading;
 
     [SerializeField] GameObject gunModel;
     [SerializeField] Camera camera;
     [SerializeField] ParticleSystem muzzleFlash;
-    // Start is called before the first frame update
+    [SerializeField] Text magazineAmmoText;
+    [SerializeField] Text spareAmmoText;
+
     void Start()
     {
         gunModel.SetActive(true);
-        isReloading = false;
+        isReloading = false;        
     }
 
     private void OnEnable()
     {
         isReloading = false;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
+        magazineAmmoText.text = currentAmmoInClip.ToString();
+        spareAmmoText.text = ammoCarriedByPlayer.ToString();
+
         if (isReloading)
         {
-            return;
-        }
-
-        if (currentAmmoInClip <= 0 && ammoCarriedByPlayer > 0)
-        {           
-            StartCoroutine(Reload());
             return;
         }
 
         if (Input.GetButtonDown("Reload") && currentAmmoInClip != ammoCapacity && ammoCarriedByPlayer > 0)
         {
             StartCoroutine(Reload());
+            return;
         }
 
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currentAmmoInClip > 0)
@@ -55,6 +55,8 @@ public class WeaponScript : MonoBehaviour
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
+
+        Debug.Log(ammoCarriedByPlayer);
     }
 
     void Shoot()

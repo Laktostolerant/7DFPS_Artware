@@ -5,11 +5,12 @@ using UnityEngine;
 public class PickUpWeapons : MonoBehaviour
 {
     bool isPlayerCloseEnough;
-    public bool pickedUpWeapon;
+    public static bool pickedUpWeapon;
 
     [SerializeField] GameObject gunOnGround;
     [SerializeField] GameObject gunInHands;
     [SerializeField] GameObject infoText;
+    public static int ammoToAddToInventory = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class PickUpWeapons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && !pickedUpWeapon)
         {
             //Destroy(gunOnGround);
             gunOnGround.SetActive(false);
@@ -29,6 +30,15 @@ public class PickUpWeapons : MonoBehaviour
             pickedUpWeapon = true;
             gunInHands.SetActive(true);
         }
+
+        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && pickedUpWeapon)
+        {
+            gunOnGround.SetActive(false);
+            infoText.SetActive(false);
+            WeaponScript.ammoCarriedByPlayer += ammoToAddToInventory;
+        }
+
+        Debug.Log(pickedUpWeapon);
     }
 
     private void OnTriggerEnter(Collider other)
