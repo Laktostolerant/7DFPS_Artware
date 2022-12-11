@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponScript : MonoBehaviour
+public class PistolScript : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] float range;
     [SerializeField] float fireRate;
 
     float nextTimeToFire;
-    
+
     [SerializeField] int ammoCapacity;
     [SerializeField] int currentAmmoInClip;
     public static int ammoCarriedByPlayer = 30;
@@ -26,14 +26,14 @@ public class WeaponScript : MonoBehaviour
     void Start()
     {
         gunModel.SetActive(true);
-        isReloading = false;        
+        isReloading = false;
     }
 
     private void OnEnable()
     {
         isReloading = false;
     }
-    
+
     void Update()
     {
         magazineAmmoText.text = currentAmmoInClip.ToString();
@@ -50,9 +50,8 @@ public class WeaponScript : MonoBehaviour
             return;
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currentAmmoInClip > 0)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
+        if (Input.GetButtonDown("Fire1") && currentAmmoInClip > 0)
+        {            
             Shoot();
         }
 

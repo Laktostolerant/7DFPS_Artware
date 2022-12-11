@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpWeapons : MonoBehaviour
+public class PickUpPistol : MonoBehaviour
 {
     bool isPlayerCloseEnough;
     public static bool pickedUpWeapon;
@@ -35,8 +35,8 @@ public class PickUpWeapons : MonoBehaviour
         {
             gunOnGround.SetActive(false);
             infoText.SetActive(false);
-            ammoToAddToInventory = Random.Range(5, 31);
-            WeaponScript.ammoCarriedByPlayer += ammoToAddToInventory;
+            ammoToAddToInventory = Random.Range(3, 16);
+            PistolScript.ammoCarriedByPlayer += ammoToAddToInventory;
         }
 
         Debug.Log(pickedUpWeapon);
