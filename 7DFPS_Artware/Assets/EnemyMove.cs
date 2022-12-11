@@ -6,63 +6,74 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
+    enum EnemyState { Wandering, Chasing, Fighting }
 
+    EnemyState currentState = EnemyState.Wandering;
     //MAJOR WIP
     //WILL BE REWORKED
     //TO ADD CHASING BEHAVIOUR INSTEAD.
 
     private NavMeshAgent agent;
-    Vector3 originPosition;
+    Vector3 spawnPosition;
     RaycastHit hit;
 
-    bool isOccupied;
+    bool wanderDelay;
 
     [SerializeField] LayerMask chaseRayMask;
-    Vector3 chaseLocation;
+    //Vector3 chaseLocation;
 
-    // Start is called before the first frame update
+    //// Start is called before the first frame update
     void Start()
     {
-        originPosition = transform.position;
+        spawnPosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
-        //agent.autoBraking = false;
-        Wander();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        ChooseTask();
+    }
 
-        //Todo: make it choose between behaviours; idle, wandering, chasing & fighting.
-        //Make it an enum?
-        //Kill coroutines when starting new behaviours.
-
-        if(isOccupied && agent.hasPath)
+    void ChooseTask()
+    {
+        if (currentState == EnemyState.Chasing || currentState == EnemyState.Fighting)
         {
-            
+            if(!agent.hasPath)
+            {
+                Debug.Log("lost track of player... time to wander");
+                Wander();
+            }
+
             return;
         }
-           
 
-        if(!agent.hasPath)
+        if (!wanderDelay)
         {
-            var distance = Vector3.Distance(transform.position, originPosition);
-
-            if(distance > 10)
-            {
-                agent.destination = originPosition;
-            }
-            else
-            {
-                Wander();
-                StartCoroutine(ActionDelay(Random.Range(5, 10)));
-            }
+            Wander();
         }
+    }
+
+    void Idle()
+    {
+
     }
 
     void Wander()
     {
+        currentState = EnemyState.Wandering;
         agent.destination = RandomNavSphere(transform.position, 10, 7);
+        StartCoroutine(ActionDelay(Random.Range(1, 7)));
+    }
+
+    void Chase(Vector3 target)
+    {
+        agent.ResetPath();
+        agent.destination = target;
+    }
+
+    void Fight()
+    {
+
     }
 
     Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -80,33 +91,27 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator ActionDelay(float idletime)
     {
-        isOccupied = true;
+        wanderDelay = true;
         yield return new WaitForSeconds(idletime);
-        isOccupied = false;
+        wanderDelay = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
-            Debug.Log("PLAYER IN RANGE");
-            if (Physics.Raycast(transform.position, other.transform.position, out hit, 10f, chaseRayMask))
+            Vector3 dir = -(transform.position - other.transform.position).normalized;
+
+            if (Physics.Raycast(transform.position, dir, out hit, 10f, chaseRayMask))
             {
                 if (hit.transform.tag == "Player")
                 {
-                    Debug.Log("I CAN SEE PLAYER, NOT BEHIND WALL");
+                    Debug.DrawRay(transform.position, 10 * dir, Color.red, 2);
+                    currentState = EnemyState.Chasing;
                     Chase(other.transform.position);
                 }
             }
         }
-    }
-
-    void Chase(Vector3 target)
-    {
-        Debug.Log("TARGET LOCATION IS: " + target);
-        agent.ResetPath();
-        isOccupied = true;
-        agent.destination = target; 
     }
 
     void DistanceToPlayer()
