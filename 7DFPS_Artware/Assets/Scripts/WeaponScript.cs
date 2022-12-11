@@ -65,8 +65,7 @@ public class WeaponScript : MonoBehaviour
 
         currentAmmoInClip--;
 
-        RaycastHit hit;
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range))
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out RaycastHit hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
 
@@ -75,7 +74,7 @@ public class WeaponScript : MonoBehaviour
                 target.TakeDamage(damage);
             }
         }
-     }
+    }
 
     IEnumerator Reload()
     {
