@@ -23,7 +23,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] Text spareAmmoText;
 
     [SerializeField] AudioSource gunAudioSource;
-    [SerializeField] AudioClip gunshot;
+    [SerializeField] AudioClip gunshot;    
 
     public PlayerMovement bulletholeInstantiater;
 
