@@ -26,6 +26,7 @@ public class WeaponScript : MonoBehaviour
 
     [SerializeField] AudioSource gunAudioSource;
     [SerializeField] AudioClip gunshot;
+    [SerializeField] AudioClip reloadSound;
 
     public PlayerMovement bulletholeInstantiater;
 
@@ -89,6 +90,8 @@ public class WeaponScript : MonoBehaviour
         isReloading = true;
 
         gunModel.SetActive(false);
+
+        gunAudioSource.PlayOneShot(reloadSound);
 
         yield return new WaitForSeconds(reloadTime);
 
