@@ -23,6 +23,10 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] Text magazineAmmoText;
     [SerializeField] Text spareAmmoText;
+
+    [SerializeField] AudioSource gunAudioSource;
+    [SerializeField] AudioClip gunshot;
+
     public PlayerMovement bulletholeInstantiater;
 
     void Start()
@@ -64,6 +68,8 @@ public class WeaponScript : MonoBehaviour
         muzzleFlash.Play();
 
         currentAmmoInClip--;
+
+        gunAudioSource.PlayOneShot(gunshot);
 
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out RaycastHit hit, range))
         {

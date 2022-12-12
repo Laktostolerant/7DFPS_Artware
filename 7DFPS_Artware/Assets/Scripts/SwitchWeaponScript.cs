@@ -87,7 +87,6 @@ public class SwitchWeaponScript : MonoBehaviour
             SMG.SetActive(false);
             Pistol.SetActive(true);
             weaponSelected = 1;
-            Debug.Log("Jag hittas");
             oneTimeBoolForWeaponSwitch = true;
         }
         
