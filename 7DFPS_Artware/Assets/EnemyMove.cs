@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,8 +10,10 @@ using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
     enum EnemyState { Wandering, Chasing, Fighting }
+    enum WeaponType { Pistol, Submachine }
 
     EnemyState currentState = EnemyState.Wandering;
+    [SerializeField] WeaponType currentWeapon;
 
     private NavMeshAgent agent;
     Vector3 spawnPosition;
@@ -22,12 +25,49 @@ public class EnemyMove : MonoBehaviour
 
     [SerializeField] LayerMask chaseRayMask;
 
-    [SerializeField] Animation[] enemyAnimations;
+    [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] AudioClip[] gunSounds;
+    [SerializeField] AudioClip[] reloadSounds;
+    [SerializeField] AudioSource gunAudioSource;
+
+    bool shootDelay;
+    bool isReloading;
+
+    [Space(10)]
+    [Header("ENEMY STATS")]
+    [SerializeField] int ammoCount;
+    [SerializeField] int damageCount;
+    [SerializeField] int reloadTime;
+    [SerializeField] int missChance;
+    [SerializeField] float firingRate;
+    [SerializeField] AudioClip gunShot;
+    [SerializeField] AudioClip reloady;
 
     void Start()
     {
         spawnPosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
+
+        if (currentWeapon == WeaponType.Pistol)
+        {
+            ammoCount = 5;
+            damageCount = 5;
+            reloadTime = 2;
+            firingRate = 0.8f;
+            gunShot = gunSounds[0];
+            reloady = reloadSounds[0];
+            missChance = 3;
+        }
+        else
+        {
+            ammoCount = 30;
+            damageCount = 2;
+            reloadTime = 4;
+            firingRate = 0.1f;
+            gunShot = gunSounds[1];
+            reloady = reloadSounds[1];
+            missChance = 5;
+        }
     }
 
     private void Update()
@@ -44,7 +84,6 @@ public class EnemyMove : MonoBehaviour
                 Debug.Log("lost track of player... time to wander");
                 Wander();
             }
-
             return;
         }
 
@@ -54,10 +93,6 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    void Idle()
-    {
-
-    }
 
     void Wander()
     {
@@ -81,17 +116,20 @@ public class EnemyMove : MonoBehaviour
     void Fight(Vector3 target)
     {
         agent.speed = 1f;
-        agent.angularSpeed = 240;
+        agent.angularSpeed = 360;
         currentState = EnemyState.Chasing;
         agent.ResetPath();
         agent.destination = target;
-        enemyShoot.EnemyShoot();
-        Debug.Log("PEW PEW PEW IM SHOOTING PEW PEW PEW");
+
+        if(!shootDelay)
+        {
+            StartCoroutine(Shoot(target));
+        }
     }
 
     Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
     {
-        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+        Vector3 randomDirection = Random.insideUnitSphere * distance;
 
         randomDirection += origin;
 
@@ -133,8 +171,63 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    void DistanceToPlayer()
+    IEnumerator Shoot(Vector3 targetPos)
     {
-        //if(!agent.hasPath || )
+       if(!isReloading)
+        {
+            Vector3 dir = -(transform.position - targetPos).normalized;
+            Debug.Log("I SHOT SHOT LOL");
+
+            if (Physics.Raycast(transform.position, dir, out RaycastHit hit, 10, chaseRayMask))
+            {
+                if (hit.transform.tag == "Player")
+                {
+                    DealDamage();
+                }
+            }
+
+            shootDelay = true;
+            yield return new WaitForSeconds(firingRate);
+            shootDelay = false;
+
+            if (ammoCount < 1)
+                StartCoroutine(Reload());
+        }
+    }
+
+    void DealDamage()
+    {
+        muzzleFlash.Play();
+        Target target = hit.transform.GetComponent<Target>();
+        int roulette = Random.Range(0, 11);
+        bool hitShot = roulette > missChance;
+
+        Debug.Log("roulette: " + roulette);
+        Debug.Log("hitshot? " + hitShot);
+
+        gunAudioSource.PlayOneShot(gunShot);
+        ammoCount--;
+
+        if (hitShot)
+            target.TakeDamage(damageCount);
+        
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        yield return new WaitForSeconds(1f);
+        gunAudioSource.PlayOneShot(reloady);
+        yield return new WaitForSeconds(reloadTime - 1f);
+        ReloadGun();
+        isReloading = false;
+    }
+
+    void ReloadGun()
+    {
+        if (currentWeapon == WeaponType.Pistol)
+            ammoCount = 5;
+        else
+            ammoCount = 30;
     }
 }

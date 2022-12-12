@@ -71,7 +71,6 @@ public class EnemyPistolScript : MonoBehaviour
             bulletholeInstantiater.Shoot(hit);
         }
 
-
         Debug.Log("PANG");
     }
 
