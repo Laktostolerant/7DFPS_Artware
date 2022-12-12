@@ -40,7 +40,7 @@ public class EnemyPistolScript : MonoBehaviour
         }
         else
         {
-            StartCoroutine(EnemyReload());
+            StartCoroutine(EnemyReload()); // dödar öron
         }
 
         if (currentAmmoInClip == 0)
