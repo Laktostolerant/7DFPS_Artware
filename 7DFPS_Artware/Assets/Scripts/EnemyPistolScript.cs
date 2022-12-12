@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMP5Script : MonoBehaviour
+public class EnemyPistolScript : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] float range;
@@ -36,15 +36,23 @@ public class EnemyMP5Script : MonoBehaviour
         if (currentAmmoInClip > 0)
         {
             StartCoroutine(Shoot());
+            return;
         }
         else
         {
             StartCoroutine(EnemyReload());
         }
+
+        if (currentAmmoInClip == 0)
+        {
+            currentAmmoInClip += ammoCapacity;
+        }
     }
 
     IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(timeToFire);
+
         muzzleFlash.Play();
 
         currentAmmoInClip--;
@@ -63,7 +71,6 @@ public class EnemyMP5Script : MonoBehaviour
             bulletholeInstantiater.Shoot(hit);
         }
 
-        yield return new WaitForSeconds(timeToFire);
 
         Debug.Log("PANG");
     }

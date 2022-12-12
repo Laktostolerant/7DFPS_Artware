@@ -19,7 +19,7 @@ public class EnemyMove : MonoBehaviour
     Vector3 spawnPosition;
     RaycastHit hit;
 
-    public EnemyMP5Script enemyShoot;
+    public EnemyPistolScript enemyShoot;
 
     bool wanderDelay;
 
