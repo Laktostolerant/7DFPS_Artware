@@ -7,13 +7,16 @@ public class Melee : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float range;
     [SerializeField] float fireRate;
+    [SerializeField] float impactForce;
+    [SerializeField] AudioSource meleeAudioSource;
+    [SerializeField] AudioClip meleeSound;
+
 
     float nextTimeToFire;
 
     bool isReloading;
 
     [SerializeField] Camera camera;
-    public PlayerMovement bulletholeInstantiater;
 
     void Update()
     {
@@ -33,9 +36,9 @@ public class Melee : MonoBehaviour
             if (target != null)
             {
                 target.TakeDamage(damage);
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
+                meleeAudioSource.PlayOneShot(meleeSound);
             }
-
-            bulletholeInstantiater.Shoot(hit);
         }
     }
 }

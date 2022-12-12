@@ -9,6 +9,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float range;
     [SerializeField] float fireRate;
+    [SerializeField] float impactForce;
 
     [SerializeField] int ammoCapacity;
     [SerializeField] int currentAmmoInClip;
@@ -76,6 +77,7 @@ public class PistolScript : MonoBehaviour
             if (target != null)
             {
                 target.TakeDamage(damage);
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
             bulletholeInstantiater.Shoot(hit);
