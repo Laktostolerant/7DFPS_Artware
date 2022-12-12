@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6344443380385009170}
   - component: {fileID: 8044596850568872375}
   - component: {fileID: 5206391513930708349}
+  - component: {fileID: 9177114869466597344}
   m_Layer: 0
   m_Name: Square_Table_Unity
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9177114869466597344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998844248183346344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6247438, y: 0.5561062, z: 1.1379236}
+  m_Center: {x: -0.05547841, y: 0.256518, z: -0.003872633}
