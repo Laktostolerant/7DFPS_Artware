@@ -11,9 +11,6 @@ public class EnemyMove : MonoBehaviour
     enum EnemyState { Wandering, Chasing, Fighting }
 
     EnemyState currentState = EnemyState.Wandering;
-    //MAJOR WIP
-    //WILL BE REWORKED
-    //TO ADD CHASING BEHAVIOUR INSTEAD.
 
     private NavMeshAgent agent;
     Vector3 spawnPosition;
@@ -24,7 +21,8 @@ public class EnemyMove : MonoBehaviour
     bool wanderDelay;
 
     [SerializeField] LayerMask chaseRayMask;
-    //Vector3 chaseLocation;
+
+    [SerializeField] Animation[] enemyAnimations;
 
     void Start()
     {
@@ -63,6 +61,7 @@ public class EnemyMove : MonoBehaviour
 
     void Wander()
     {
+        //enemyAnimations[1].Play();
         agent.speed = 3.5f;
         agent.angularSpeed = 120;
         currentState = EnemyState.Wandering;
