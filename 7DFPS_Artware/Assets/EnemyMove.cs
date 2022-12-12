@@ -16,6 +16,8 @@ public class EnemyMove : MonoBehaviour
     Vector3 spawnPosition;
     RaycastHit hit;
 
+    public EnemyMP5Script enemyShoot;
+
     bool wanderDelay;
 
     [SerializeField] LayerMask chaseRayMask;
@@ -83,6 +85,7 @@ public class EnemyMove : MonoBehaviour
         currentState = EnemyState.Chasing;
         agent.ResetPath();
         agent.destination = target;
+        enemyShoot.EnemyShoot();
         Debug.Log("PEW PEW PEW IM SHOOTING PEW PEW PEW");
     }
 
