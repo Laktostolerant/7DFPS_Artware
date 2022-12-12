@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Threading;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
@@ -22,7 +24,6 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] LayerMask chaseRayMask;
     //Vector3 chaseLocation;
 
-    //// Start is called before the first frame update
     void Start()
     {
         spawnPosition = transform.position;
@@ -60,6 +61,8 @@ public class EnemyMove : MonoBehaviour
 
     void Wander()
     {
+        agent.speed = 3.5f;
+        agent.angularSpeed = 120;
         currentState = EnemyState.Wandering;
         agent.destination = RandomNavSphere(transform.position, 10, 7);
         StartCoroutine(ActionDelay(Random.Range(1, 7)));
@@ -67,13 +70,21 @@ public class EnemyMove : MonoBehaviour
 
     void Chase(Vector3 target)
     {
+        agent.speed = 3.5f;
+        agent.angularSpeed = 120;
+        currentState = EnemyState.Chasing;
         agent.ResetPath();
         agent.destination = target;
     }
 
-    void Fight()
+    void Fight(Vector3 target)
     {
-
+        agent.speed = 1f;
+        agent.angularSpeed = 240;
+        currentState = EnemyState.Chasing;
+        agent.ResetPath();
+        agent.destination = target;
+        Debug.Log("PEW PEW PEW IM SHOOTING PEW PEW PEW");
     }
 
     Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -106,9 +117,15 @@ public class EnemyMove : MonoBehaviour
             {
                 if (hit.transform.tag == "Player")
                 {
-                    Debug.DrawRay(transform.position, 10 * dir, Color.red, 2);
-                    currentState = EnemyState.Chasing;
-                    Chase(other.transform.position);
+                    Debug.DrawRay(transform.position, 10 * dir, UnityEngine.Color.red, 2);
+                    if(Vector3.Distance(transform.position, hit.transform.position) > 10)
+                    {                     
+                        Chase(other.transform.position);
+                    }
+                    else
+                    {
+                        Fight(other.transform.position);
+                    }
                 }
             }
         }
