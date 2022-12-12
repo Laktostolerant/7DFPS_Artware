@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class WeaponScript : MonoBehaviour
     
     [SerializeField] int ammoCapacity;
     [SerializeField] int currentAmmoInClip;
-    public static int ammoCarriedByPlayer = 30;
+    public static int ammoCarriedByPlayer = 0;
     [SerializeField] float reloadTime;
     bool isReloading;
 
@@ -22,6 +23,7 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] Text magazineAmmoText;
     [SerializeField] Text spareAmmoText;
+    public PlayerMovement bulletholeInstantiater;
 
     void Start()
     {
@@ -55,9 +57,7 @@ public class WeaponScript : MonoBehaviour
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
-
-        Debug.Log(ammoCarriedByPlayer);
-    }
+    }   
 
     void Shoot()
     {
@@ -68,11 +68,13 @@ public class WeaponScript : MonoBehaviour
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out RaycastHit hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
-
+            
             if (target != null)
             {
                 target.TakeDamage(damage);
             }
+
+            bulletholeInstantiater.Shoot(hit);
         }
     }
 
@@ -106,5 +108,5 @@ public class WeaponScript : MonoBehaviour
         gunModel.SetActive(true);
 
         isReloading = false;
-    }
+    }    
 }

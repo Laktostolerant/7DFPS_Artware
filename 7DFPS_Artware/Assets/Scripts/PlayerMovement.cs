@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
                 fovCoroutine = StartCoroutine(ZoomCoroutine(playerCamera, 60, 0.25f));
 
             if (isShooting && Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, 10f, bulletLayerMask))
-                Shoot(hit);
+                return;
         }
     }
 
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         playerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + heightOffset, transform.position.z);
     }
 
-    void Shoot(RaycastHit target)
+    public void Shoot(RaycastHit target)
     {
         Instantiate(bulletHole, target.point, Quaternion.LookRotation(-target.normal));
     }

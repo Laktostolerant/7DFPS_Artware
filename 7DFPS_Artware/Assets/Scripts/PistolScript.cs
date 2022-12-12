@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,9 @@ public class PistolScript : MonoBehaviour
     [SerializeField] float range;
     [SerializeField] float fireRate;
 
-    float nextTimeToFire;
-
     [SerializeField] int ammoCapacity;
     [SerializeField] int currentAmmoInClip;
-    public static int ammoCarriedByPlayer = 30;
+    public static int ammoCarriedByPlayer = 0;
     [SerializeField] float reloadTime;
     bool isReloading;
 
@@ -22,6 +21,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] Text magazineAmmoText;
     [SerializeField] Text spareAmmoText;
+    public PlayerMovement bulletholeInstantiater;
 
     void Start()
     {
@@ -54,8 +54,6 @@ public class PistolScript : MonoBehaviour
         {            
             Shoot();
         }
-
-        Debug.Log(ammoCarriedByPlayer);
     }
 
     void Shoot()
@@ -72,6 +70,8 @@ public class PistolScript : MonoBehaviour
             {
                 target.TakeDamage(damage);
             }
+
+            bulletholeInstantiater.Shoot(hit);
         }
     }
 

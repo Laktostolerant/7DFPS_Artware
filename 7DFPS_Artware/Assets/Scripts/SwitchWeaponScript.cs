@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class SwitchWeaponScript : MonoBehaviour
 {
-    [SerializeField] int weaponSelected;
-    [SerializeField] GameObject SMGAmmo;
-    [SerializeField] GameObject PistolAmmo;
+    public static int weaponSelected;
+    [SerializeField] GameObject SMGMagText;
+    [SerializeField] GameObject SMGSpareMagText;
+    [SerializeField] GameObject PistolMagText;
+    [SerializeField] GameObject PistolSpareMagText;
+    [SerializeField] GameObject Pistol;
+    [SerializeField] GameObject SMG;
+    bool oneTimeBoolForWeaponSwitch = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        WeaponSelection();
+        Pistol.SetActive(false);
+        SMG.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         int previousWeapon = weaponSelected;
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && PickUpWeapons.pickedUpWeapon && PickUpPistol.pickedUpWeapon)
         {
             if (weaponSelected >= transform.childCount - 1)
             {
@@ -30,7 +34,7 @@ public class SwitchWeaponScript : MonoBehaviour
                 weaponSelected++;
             }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f && PickUpWeapons.pickedUpWeapon && PickUpPistol.pickedUpWeapon)
         {
             if (weaponSelected <= 0)
             {
@@ -42,10 +46,51 @@ public class SwitchWeaponScript : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            weaponSelected = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+        {
+            weaponSelected = 1;
+        }
+
+        if (weaponSelected == 0)
+        {
+            SMGMagText.SetActive(true);
+            SMGSpareMagText.SetActive(true);
+            PistolMagText.SetActive(false);
+            PistolSpareMagText.SetActive(false);
+        }
+
+        if (weaponSelected == 1)
+        {
+            SMGMagText.SetActive(false);
+            SMGSpareMagText.SetActive(false);
+            PistolMagText.SetActive(true);
+            PistolSpareMagText.SetActive(true);
+        }
+
         if (previousWeapon != weaponSelected)
         {
             WeaponSelection();
         }
+
+        SwitchStartingWeapon();
+    }
+
+    void SwitchStartingWeapon()
+    {
+        if (!oneTimeBoolForWeaponSwitch && PickUpWeapons.pickedUpWeapon && PickUpPistol.pickedUpWeapon)
+        {
+            SMG.SetActive(false);
+            Pistol.SetActive(true);
+            weaponSelected = 1;
+            Debug.Log("Jag hittas");
+            oneTimeBoolForWeaponSwitch = true;
+        }
+        
     }
 
     void WeaponSelection()

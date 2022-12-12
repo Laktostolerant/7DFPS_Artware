@@ -10,36 +10,50 @@ public class PickUpWeapons : MonoBehaviour
     [SerializeField] GameObject gunOnGround;
     [SerializeField] GameObject gunInHands;
     [SerializeField] GameObject infoText;
-    public static int ammoToAddToInventory;
-    // Start is called before the first frame update
+    [SerializeField] GameObject gunToHolster;
+
+    [SerializeField] int lowestAmmoCount;
+    [SerializeField] int highestAmmoCount;
+    int ammoToAddToInventory;
+    
     void Start()
     {
         gunOnGround.SetActive(true);
         infoText.SetActive(false);
         gunInHands.SetActive(false);
+        CheckWeaponsOnPlayer.hasPistol = false;
+        CheckWeaponsOnPlayer.hasSMG = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && !pickedUpWeapon)
         {
-            //Destroy(gunOnGround);
-            gunOnGround.SetActive(false);
             infoText.SetActive(false);
             pickedUpWeapon = true;
             gunInHands.SetActive(true);
+            CheckWeaponsOnPlayer.hasSMG = true;
+            SwitchWeaponScript.weaponSelected = 0;
+            Destroy(gunOnGround);
         }
 
-        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && pickedUpWeapon)
+        if (isPlayerCloseEnough && pickedUpWeapon)
         {
-            gunOnGround.SetActive(false);
-            infoText.SetActive(false);
-            ammoToAddToInventory = Random.Range(5, 31);
+            ammoToAddToInventory = Random.Range(lowestAmmoCount, highestAmmoCount + 1);
             WeaponScript.ammoCarriedByPlayer += ammoToAddToInventory;
+            gunOnGround.SetActive(false);
         }
 
-        Debug.Log(pickedUpWeapon);
+        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && !pickedUpWeapon && CheckWeaponsOnPlayer.hasPistol)
+        {
+            infoText.SetActive(false);
+            pickedUpWeapon = true;
+            gunInHands.SetActive(true);
+            CheckWeaponsOnPlayer.hasSMG = true;
+            SwitchWeaponScript.weaponSelected = 0;
+            gunToHolster.SetActive(false);
+            Destroy(gunOnGround);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,18 +62,23 @@ public class PickUpWeapons : MonoBehaviour
         {
             isPlayerCloseEnough = true;
 
-            infoText.SetActive(true);
+            if (!pickedUpWeapon)
+            {
+                infoText.SetActive(true);
+            }            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-
         if (other.CompareTag("Player"))
         {
             isPlayerCloseEnough = false;
 
-            infoText.SetActive(false);
+            if (!pickedUpWeapon)
+            {
+                infoText.SetActive(true);
+            }
         }
     }
 }
