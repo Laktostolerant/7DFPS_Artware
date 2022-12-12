@@ -985,6 +985,7 @@ MonoBehaviour:
   spareAmmoText: {fileID: 13625966}
   gunAudioSource: {fileID: 223114285}
   gunshot: {fileID: 8300000, guid: 04a56e3c6083dbb4d87b80c7e1f6e47f, type: 3}
+  reloadSound: {fileID: 8300000, guid: e195ccf0013d6a141a7baa3bac1437fb, type: 3}
   bulletholeInstantiater: {fileID: 183180062}
 --- !u!82 &223114285
 AudioSource:
@@ -999,7 +1000,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.355
-  m_Pitch: 1.51
+  m_Pitch: 1.01
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -16774,7 +16775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac084c9c531bafd49a94387889c4b9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.001
+  damage: 1
   range: 5000
   timeToFire: 2
   ammoCapacity: 15
@@ -18016,7 +18017,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1.51
+  m_Pitch: 1.11
   Loop: 0
   Mute: 0
   Spatialize: 0
