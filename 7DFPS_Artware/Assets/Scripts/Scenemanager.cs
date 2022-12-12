@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-
-
-public class Scenechanger : MonoBehaviour
+public class Scenemanager : MonoBehaviour
 {
     // to load the next scene
 
