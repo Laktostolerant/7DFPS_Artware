@@ -27,7 +27,7 @@ public class PickUpWeapons : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && !pickedUpWeapon)
+        if (isPlayerCloseEnough && !pickedUpWeapon)
         {
             infoText.SetActive(false);
             pickedUpWeapon = true;
@@ -44,7 +44,7 @@ public class PickUpWeapons : MonoBehaviour
             gunOnGround.SetActive(false);
         }
 
-        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && !pickedUpWeapon && CheckWeaponsOnPlayer.hasPistol)
+        if (isPlayerCloseEnough && !pickedUpWeapon && CheckWeaponsOnPlayer.hasPistol)
         {
             infoText.SetActive(false);
             pickedUpWeapon = true;
