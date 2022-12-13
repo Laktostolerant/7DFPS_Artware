@@ -9,7 +9,6 @@ public class PickUpPistol : MonoBehaviour
 
     [SerializeField] GameObject gunOnGround;
     [SerializeField] GameObject gunInHands;
-    [SerializeField] GameObject infoText;
     [SerializeField] GameObject gunToHolster;
 
     [SerializeField] int lowestAmmoCount;
@@ -19,7 +18,6 @@ public class PickUpPistol : MonoBehaviour
     void Start()
     {
         gunOnGround.SetActive(true);
-        infoText.SetActive(false);
         gunInHands.SetActive(false);
         CheckWeaponsOnPlayer.hasPistol = false;
         CheckWeaponsOnPlayer.hasSMG = false;
@@ -29,7 +27,6 @@ public class PickUpPistol : MonoBehaviour
     {
         if (isPlayerCloseEnough && !pickedUpWeapon)
         {
-            infoText.SetActive(false);
             pickedUpWeapon = true;
             gunInHands.SetActive(true);
             CheckWeaponsOnPlayer.hasSMG = true;
@@ -46,7 +43,6 @@ public class PickUpPistol : MonoBehaviour
 
         if (isPlayerCloseEnough && !pickedUpWeapon && CheckWeaponsOnPlayer.hasPistol)
         {
-            infoText.SetActive(false);
             pickedUpWeapon = true;
             gunInHands.SetActive(true);
             CheckWeaponsOnPlayer.hasSMG = true;
@@ -61,11 +57,6 @@ public class PickUpPistol : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerCloseEnough = true;
-
-            if (!pickedUpWeapon)
-            {
-                infoText.SetActive(true);
-            }
         }
     }
 
@@ -74,11 +65,6 @@ public class PickUpPistol : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerCloseEnough = false;
-
-            if (!pickedUpWeapon)
-            {
-                infoText.SetActive(true);
-            }
         }
     }
 }
