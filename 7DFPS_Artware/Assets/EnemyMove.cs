@@ -9,7 +9,7 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-    enum EnemyState { Wandering, Chasing, Fighting }
+    enum EnemyState { Idling, Wandering, Chasing, Fighting }
     enum WeaponType { Pistol, Submachine }
 
     EnemyState currentState = EnemyState.Wandering;
@@ -18,6 +18,8 @@ public class EnemyMove : MonoBehaviour
     private NavMeshAgent agent;
     Vector3 spawnPosition;
     RaycastHit hit;
+
+    Animator animator;
 
     public EnemyPistolScript enemyShoot;
 
@@ -47,6 +49,7 @@ public class EnemyMove : MonoBehaviour
     {
         spawnPosition = transform.position;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
 
         if (currentWeapon == WeaponType.Pistol)
         {
@@ -72,8 +75,25 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
+        if (animator.GetBool("dead"))
+        {
+            agent.ResetPath();
+            return;
+        }
+
+        float velocity = agent.velocity.magnitude / agent.speed;
+        if(velocity < 0.1f)
+            Debug.Log("velocity: " + velocity);
+        animator.SetFloat("velocity", velocity);
+
         ChooseTask();
+
+        if(Input.GetKey(KeyCode.F))
+        {
+            StartCoroutine(Death());
+        }
     }
+
 
     void ChooseTask()
     {
@@ -96,16 +116,19 @@ public class EnemyMove : MonoBehaviour
 
     void Wander()
     {
-        //enemyAnimations[1].Play();
+        animator.SetInteger("state", 0);
+        animator.speed = 1f;
         agent.speed = 3.5f;
         agent.angularSpeed = 120;
         currentState = EnemyState.Wandering;
         agent.destination = RandomNavSphere(transform.position, 10, 7);
-        StartCoroutine(ActionDelay(Random.Range(1, 7)));
+        StartCoroutine(ActionDelay(Random.Range(4, 8)));
     }
 
     void Chase(Vector3 target)
     {
+        animator.SetBool("running", true);
+        animator.speed = 1f;
         agent.speed = 3.5f;
         agent.angularSpeed = 120;
         currentState = EnemyState.Chasing;
@@ -115,6 +138,8 @@ public class EnemyMove : MonoBehaviour
 
     void Fight(Vector3 target)
     {
+        animator.SetInteger("state", 0);
+        animator.speed = 0.5f;
         agent.speed = 1f;
         agent.angularSpeed = 360;
         currentState = EnemyState.Chasing;
@@ -142,6 +167,8 @@ public class EnemyMove : MonoBehaviour
 
     IEnumerator ActionDelay(float idletime)
     {
+        currentState = EnemyState.Idling;
+        animator.SetInteger("state", 2);
         wanderDelay = true;
         yield return new WaitForSeconds(idletime);
         wanderDelay = false;
@@ -229,5 +256,12 @@ public class EnemyMove : MonoBehaviour
             ammoCount = 5;
         else
             ammoCount = 30;
+    }
+
+    IEnumerator Death()
+    {
+        animator.SetBool("dead", true);
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 }
