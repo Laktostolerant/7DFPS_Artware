@@ -4,44 +4,53 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    [SerializeField] Transform PlayerCamera;
-    [Header("MaxDistance you can open or close the door")]
-    [SerializeField] float MaxDistance = 5;
-
-    private bool opened = false;
-    private Animator animator;
+    bool isPlayerCloseEnough;
     [SerializeField] GameObject infoText;
+    [SerializeField] BoxCollider triggerCollider;
+
+    bool opened = false;
+    Animator animator;
 
     private void Start()
     {
-        opened = false;
+        isPlayerCloseEnough = false;
+        opened = true;
+        infoText.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E))
         {
-            Pressed();
-        }
+            animator = transform.GetComponentInParent<Animator>();
 
-        Debug.Log(opened);
+            opened = !opened;
+
+            animator.SetBool("Opened", !opened);
+
+            infoText.SetActive(false);
+
+            Destroy(triggerCollider);
+        }
     }
 
-    void Pressed()
+    private void OnTriggerEnter(Collider other)
     {
-        RaycastHit doorhit;
-
-        if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out doorhit, MaxDistance))
+        if (other.CompareTag("Player"))
         {
-            opened = true;
-            if (doorhit.transform.tag == "Door")
-            {
-                animator = doorhit.transform.GetComponentInParent<Animator>();
+            isPlayerCloseEnough = true;
 
-                opened = !opened;
+            infoText.SetActive(true);
+        }
+    }
 
-                animator.SetBool("Opened", !opened);
-            }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerCloseEnough = false;
+
+            infoText.SetActive(false);
         }
     }
 }

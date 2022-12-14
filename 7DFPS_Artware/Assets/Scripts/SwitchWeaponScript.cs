@@ -5,13 +5,20 @@ using UnityEngine;
 public class SwitchWeaponScript : MonoBehaviour
 {
     public static int weaponSelected;
+    [SerializeField] int weaponNumber;
+
     [SerializeField] GameObject SMGMagText;
     [SerializeField] GameObject SMGSpareMagText;
+
     [SerializeField] GameObject PistolMagText;
     [SerializeField] GameObject PistolSpareMagText;
+
     [SerializeField] GameObject Pistol;
     [SerializeField] GameObject SMG;
-    bool oneTimeBoolForWeaponSwitch = false;
+
+    bool hasSwitchedWeapon = false;
+    [SerializeField] bool MP5IsNewWeapon;
+    [SerializeField] bool PistolIsNewWeapon;
 
     void Start()
     {
@@ -82,14 +89,13 @@ public class SwitchWeaponScript : MonoBehaviour
 
     void SwitchStartingWeapon()
     {
-        if (!oneTimeBoolForWeaponSwitch && PickUpWeapons.pickedUpWeapon && PickUpPistol.pickedUpWeapon)
+        if (!hasSwitchedWeapon && PickUpWeapons.pickedUpWeapon && PickUpPistol.pickedUpWeapon)
         {
-            SMG.SetActive(false);
-            Pistol.SetActive(true);
-            weaponSelected = 1;
-            oneTimeBoolForWeaponSwitch = true;
-        }
-        
+            SMG.SetActive(MP5IsNewWeapon);
+            Pistol.SetActive(PistolIsNewWeapon);
+            weaponSelected = weaponNumber;
+            hasSwitchedWeapon = true;
+        }       
     }
 
     void WeaponSelection()
