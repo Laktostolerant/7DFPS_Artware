@@ -25,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
     RaycastHit hit;
 
+    [SerializeField] float stepsPerSecond;
+
+    [SerializeField] AudioSource playerAudioSource;
+    [SerializeField] AudioClip footstep;
+    [SerializeField] AudioClip crouching;
+
+    bool crouchWalking;
+    float nextTimeToStep;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -43,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         bool isAiming = Input.GetKey(KeyCode.Mouse1);
         bool isShooting = Input.GetKey(KeyCode.Mouse0);
+
+        crouchWalking = isCrouching;
 
         Vector3 rayOrigin = Camera.main.transform.position;
 
@@ -85,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
             if (isShooting && Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, 10f, bulletLayerMask))
                 return;
         }
+
+        MovementSound();
     }
 
     IEnumerator ZoomCoroutine(Camera targetCamera, float toFOV, float duration)
@@ -112,5 +125,74 @@ public class PlayerMovement : MonoBehaviour
     public void Shoot(RaycastHit target)
     {
         Instantiate(bulletHole, target.point, Quaternion.LookRotation(-target.normal));
+    }
+
+    void MovementSound()
+    {
+        if (Time.time >= nextTimeToStep && moveDirection.x > 0 && !Input.GetKey(KeyCode.LeftShift) && !crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.x < 0 && !Input.GetKey(KeyCode.LeftShift) && !crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / stepsPerSecond;
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.z > 0 && !Input.GetKey(KeyCode.LeftShift) && !crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.z < 0 && !Input.GetKey(KeyCode.LeftShift) && !crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / stepsPerSecond;
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.x > 0 && Input.GetKey(KeyCode.LeftShift) && !crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.x < 0 && Input.GetKey(KeyCode.LeftShift) && !crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / (stepsPerSecond + 0.8f);
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.z > 0 && Input.GetKey(KeyCode.LeftShift) && !crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.z < 0 && Input.GetKey(KeyCode.LeftShift) && !crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / (stepsPerSecond + 0.8f);
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.x > 0 && !Input.GetKey(KeyCode.LeftShift) && crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.x < 0 && !Input.GetKey(KeyCode.LeftShift) && crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / (stepsPerSecond - 0.8f);
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.z > 0 && !Input.GetKey(KeyCode.LeftShift) && crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.z < 0 && !Input.GetKey(KeyCode.LeftShift) && crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / (stepsPerSecond - 0.8f);
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.x > 0 && Input.GetKey(KeyCode.LeftShift) && crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.x < 0 && Input.GetKey(KeyCode.LeftShift) && crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / stepsPerSecond;
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Time.time >= nextTimeToStep && moveDirection.z > 0 && Input.GetKey(KeyCode.LeftShift) && crouchWalking
+            || Time.time >= nextTimeToStep && moveDirection.z < 0 && Input.GetKey(KeyCode.LeftShift) && crouchWalking)
+        {
+            nextTimeToStep = Time.time + 1f / stepsPerSecond;
+            playerAudioSource.PlayOneShot(footstep);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.C))
+        {
+            playerAudioSource.PlayOneShot(crouching);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.C))
+        {
+            playerAudioSource.PlayOneShot(crouching);
+        }
     }
 }
