@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 304658122}
   - component: {fileID: 304658124}
   - component: {fileID: 304658123}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,6 +746,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1 &333334307
@@ -827,7 +832,7 @@ GameObject:
   - component: {fileID: 347261945}
   - component: {fileID: 347261947}
   - component: {fileID: 347261946}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,6 +1336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1001 &569917007
@@ -1399,6 +1409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
@@ -1956,6 +1971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
 --- !u!1001 &735134884
@@ -2024,6 +2044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
@@ -2150,7 +2175,7 @@ GameObject:
   - component: {fileID: 788502310}
   - component: {fileID: 788502312}
   - component: {fileID: 788502311}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2378,7 +2403,7 @@ GameObject:
   - component: {fileID: 876813807}
   - component: {fileID: 876813809}
   - component: {fileID: 876813808}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2498,6 +2523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
 --- !u!1 &945019295
@@ -2511,7 +2541,7 @@ GameObject:
   - component: {fileID: 945019296}
   - component: {fileID: 945019298}
   - component: {fileID: 945019297}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,6 +2886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1 &1001903926
@@ -2909,7 +2944,7 @@ GameObject:
   - component: {fileID: 1058598418}
   - component: {fileID: 1058598420}
   - component: {fileID: 1058598419}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2973,7 +3008,7 @@ GameObject:
   - component: {fileID: 1114355876}
   - component: {fileID: 1114355878}
   - component: {fileID: 1114355877}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3554,7 +3589,7 @@ GameObject:
   - component: {fileID: 1212569040}
   - component: {fileID: 1212569042}
   - component: {fileID: 1212569041}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3674,6 +3709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1001 &1256909041
@@ -3742,6 +3782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
@@ -3812,6 +3857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
 --- !u!1001 &1270388725
@@ -3880,6 +3930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: gun_glock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
@@ -4498,6 +4553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1 &1423009248
@@ -4511,7 +4571,7 @@ GameObject:
   - component: {fileID: 1423009249}
   - component: {fileID: 1423009251}
   - component: {fileID: 1423009250}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4791,6 +4851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1 &1480385245
@@ -4988,6 +5053,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun_glock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66140c41adfb59e489249095a4958642,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66140c41adfb59e489249095a4958642, type: 3}
 --- !u!1001 &1566055761
@@ -5056,6 +5126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
@@ -5669,6 +5744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f74e0e624a98fd84386667110606890d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74e0e624a98fd84386667110606890d, type: 3}
 --- !u!1 &1817905355
@@ -6067,7 +6147,7 @@ GameObject:
   - component: {fileID: 1902620969}
   - component: {fileID: 1902620971}
   - component: {fileID: 1902620970}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6131,7 +6211,7 @@ GameObject:
   - component: {fileID: 1904260181}
   - component: {fileID: 1904260183}
   - component: {fileID: 1904260182}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6195,7 +6275,7 @@ GameObject:
   - component: {fileID: 1910837114}
   - component: {fileID: 1910837116}
   - component: {fileID: 1910837115}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6259,7 +6339,7 @@ GameObject:
   - component: {fileID: 1929478167}
   - component: {fileID: 1929478169}
   - component: {fileID: 1929478168}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6537,7 +6617,7 @@ GameObject:
   - component: {fileID: 2081757253}
   - component: {fileID: 2081757255}
   - component: {fileID: 2081757254}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6601,7 +6681,7 @@ GameObject:
   - component: {fileID: 2102134370}
   - component: {fileID: 2102134372}
   - component: {fileID: 2102134371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MP5Pickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6665,7 +6745,7 @@ GameObject:
   - component: {fileID: 2136287632}
   - component: {fileID: 2136287634}
   - component: {fileID: 2136287633}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlockPickup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6718,80 +6798,6 @@ MonoBehaviour:
   gunToHolster: {fileID: 1995955257}
   lowestAmmoCount: 5
   highestAmmoCount: 15
---- !u!1001 &131826518520700276
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482808, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 131826518214482811, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: infoText
-      value: 
-      objectReference: {fileID: 1188136760}
-    - target: {fileID: 131826518214482815, guid: 692cee36d889ec94bb8473005113eabf,
-        type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 692cee36d889ec94bb8473005113eabf, type: 3}
 --- !u!1001 &1433474412895190793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6874,6 +6880,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244429459394942239, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!1001 &3210030005638227827
@@ -6893,6 +6909,11 @@ PrefabInstance:
       propertyPath: magazineAmmoText
       value: 
       objectReference: {fileID: 12875690}
+    - target: {fileID: 3210030004802861896, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: IgnoreLayer.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3210030004850187958, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
       propertyPath: SMGMagText
@@ -6923,10 +6944,30 @@ PrefabInstance:
       propertyPath: magazineAmmoText
       value: 
       objectReference: {fileID: 202619078}
+    - target: {fileID: 3210030005449200479, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: IgnoreLayer.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6666666
       objectReference: {fileID: 0}
     - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
@@ -6936,7 +6977,7 @@ PrefabInstance:
     - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
@@ -6978,6 +7019,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3210030005539208275, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210030005539208301, guid: 1800cc970f6c2994588ef85dee4e2479,
+        type: 3}
+      propertyPath: bulletLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3210030005539208302, guid: 1800cc970f6c2994588ef85dee4e2479,
         type: 3}
       propertyPath: m_Name
@@ -6985,6 +7036,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1800cc970f6c2994588ef85dee4e2479, type: 3}
+--- !u!1001 &8253146617268775707
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.885
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343443, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617065343454, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorBreakableGlass
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253146617792893115, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a,
+        type: 3}
+      propertyPath: infoText
+      value: 
+      objectReference: {fileID: 1188136760}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0ef4dcddd5c9c34cace67cf1c13cc0a, type: 3}
 --- !u!1001 &8807494154503378578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6992,10 +7117,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1153699090}
     m_Modifications:
+    - target: {fileID: 8573702042567242636, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: m_Name
       value: GlockPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}

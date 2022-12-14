@@ -28,7 +28,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] AudioClip reloadSound;
 
     public PlayerMovement bulletholeInstantiater;
-
+    [SerializeField] LayerMask IgnoreLayer;
     void Start()
     {
         gunModel.SetActive(true);
@@ -70,7 +70,7 @@ public class PistolScript : MonoBehaviour
 
         gunAudioSource.PlayOneShot(gunshot);
 
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out RaycastHit hit, range))
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out RaycastHit hit, range, ~IgnoreLayer))
         {
             Target target = hit.transform.GetComponent<Target>();
 
