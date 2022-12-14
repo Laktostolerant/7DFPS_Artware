@@ -53,7 +53,7 @@ public class EnemyCombat : MonoBehaviour
             ammoCount = 30;
             damageCount = 2;
             reloadTime = 4;
-            firingRate = 0.1f;
+            firingRate = 0.08f;
             gunShot = gunSounds[1];
             reloady = reloadSounds[1];
             missChance = 5;
@@ -71,8 +71,8 @@ public class EnemyCombat : MonoBehaviour
 
     public void GoToShoot(Vector3 pos)
     {
-        StartCoroutine(Shoot(pos));
-        shootDelay = true;
+        if(!shootDelay)
+            StartCoroutine(Shoot(pos));
     }
 
     IEnumerator Shoot(Vector3 targetPos)
@@ -119,11 +119,11 @@ public class EnemyCombat : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gunAudioSource.PlayOneShot(reloady);
         yield return new WaitForSeconds(reloadTime - 1f);
-        ReloadGun();
+        ReloadStock();
         isReloading = false;
     }
 
-    void ReloadGun()
+    void ReloadStock()
     {
         if (currentWeapon == WeaponType.Pistol)
             ammoCount = 5;
