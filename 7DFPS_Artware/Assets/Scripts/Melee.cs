@@ -33,11 +33,12 @@ public class Melee : MonoBehaviour
         {
             Target target = hit.transform.GetComponent<Target>();
 
+            meleeAudioSource.PlayOneShot(meleeSound);
+
             if (target != null)
             {
                 target.TakeDamage(damage);
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
-                meleeAudioSource.PlayOneShot(meleeSound);
             }
         }
     }
