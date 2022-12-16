@@ -30,6 +30,8 @@ public class DoorScript : MonoBehaviour
         {
             opened = !opened;
 
+            animator.SetBool("Opened", !opened);
+
             infoText.SetActive(false);
 
             Destroy(triggerCollider);
