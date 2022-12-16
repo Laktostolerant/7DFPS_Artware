@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!Physics.Raycast(transform.position, Vector3.down, out hit, 0.01f))
-            characterController.Move(new Vector3(0, -0.08f, 0));
+            characterController.Move(new Vector3(0, -0.04f, 0));
 
         bool isCrouching = (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C));
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
