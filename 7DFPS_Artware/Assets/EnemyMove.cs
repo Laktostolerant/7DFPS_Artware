@@ -10,10 +10,8 @@ using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
     public enum EnemyState { Idling, Wandering, Chasing, Fighting }
-    enum WeaponType { Pistol, Submachine }
 
     public EnemyState currentState { get; private set; }  = EnemyState.Wandering;
-    [SerializeField] WeaponType currentWeapon;
 
     private NavMeshAgent agent;
     Vector3 spawnPosition;
@@ -71,9 +69,7 @@ public class EnemyMove : MonoBehaviour
 
     void Wander()
     {
-        animator.speed = 1f;
-        agent.speed = 3.5f;
-        agent.angularSpeed = 120;
+        SetSpeed(0.8f, 2f, 120);
         currentState = EnemyState.Wandering;
         agent.destination = RandomNavSphere(transform.position, 10, 7);
         StartCoroutine(ActionDelay(Random.Range(4, 8)));
@@ -82,9 +78,7 @@ public class EnemyMove : MonoBehaviour
     void Chase(Vector3 target)
     {
         animator.SetBool("running", true);
-        animator.speed = 1f;
-        agent.speed = 3.5f;
-        agent.angularSpeed = 120;
+        SetSpeed(1, 3.5f, 120);
         currentState = EnemyState.Chasing;
         agent.ResetPath();
         agent.destination = target;
@@ -92,9 +86,7 @@ public class EnemyMove : MonoBehaviour
 
     void Fight(Vector3 target)
     {
-        animator.speed = 0.5f;
-        agent.speed = 1f;
-        agent.angularSpeed = 360;
+        SetSpeed(0.5f, 1, 360);
         currentState = EnemyState.Fighting;
         agent.ResetPath();
         agent.destination = target;
@@ -147,71 +139,10 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    //IEnumerator Shoot(Vector3 targetPos)
-    //{
-    //   if(!isReloading)
-    //    {
-    //        Vector3 dir = -(transform.position - targetPos).normalized;
-    //        Debug.Log("I SHOT SHOT LOL");
-
-    //        if (Physics.Raycast(transform.position, dir, out RaycastHit hit, 10, chaseRayMask))
-    //        {
-    //            if (hit.transform.tag == "Player")
-    //            {
-    //                playerHit = hit;
-    //                DealDamage();
-    //            }
-    //        }
-
-    //        shootDelay = true;
-    //        yield return new WaitForSeconds(firingRate);
-    //        shootDelay = false;
-
-    //        if (ammoCount < 1)
-    //            StartCoroutine(Reload());
-    //    }
-    //}
-
-    //void DealDamage()
-    //{
-    //    muzzleFlash.Play();
-    //    Target target = hitRay.transform.GetComponent<Target>();
-    //    int roulette = Random.Range(0, 11);
-    //    bool hitShot = roulette > missChance;
-
-    //    Debug.Log("roulette: " + roulette);
-    //    Debug.Log("hitshot? " + hitShot);
-
-    //    gunAudioSource.PlayOneShot(gunShot);
-    //    ammoCount--;
-
-    //    if (hitShot)
-    //        target.TakeDamage(damageCount);
-        
-    //}
-
-    //IEnumerator Reload()
-    //{
-    //    isReloading = true;
-    //    yield return new WaitForSeconds(1f);
-    //    gunAudioSource.PlayOneShot(reloady);
-    //    yield return new WaitForSeconds(reloadTime - 1f);
-    //    ReloadGun();
-    //    isReloading = false;
-    //}
-
-    //void ReloadGun()
-    //{
-    //    if (currentWeapon == WeaponType.Pistol)
-    //        ammoCount = 5;
-    //    else
-    //        ammoCount = 30;
-    //}
-
-    //IEnumerator Death()
-    //{
-    //    animator.SetBool("dead", true);
-    //    yield return new WaitForSeconds(3);
-    //    Destroy(gameObject);
-    //}
+    void SetSpeed(float animationSpeed, float movementSpeed, int angularSpeed)
+    {
+        animator.speed = animationSpeed;
+        agent.speed = movementSpeed;
+        agent.angularSpeed = angularSpeed;
+    }
 }

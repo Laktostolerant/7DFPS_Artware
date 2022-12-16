@@ -1105,6 +1105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  isHuman: 0
+  isFakeSoldier: 0
+  soldierModel: {fileID: 0}
+  doctorModel: {fileID: 0}
 --- !u!1 &350455156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,6 +6777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b015f040ba0f3a44b7f4730f0ec9584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seeRayMask:
+    serializedVersion: 2
+    m_Bits: 65
 --- !u!195 &759828334567393561
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6818,7 +6825,7 @@ Animator:
   m_GameObject: {fileID: 126280511107290029}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 033ff74bf5505f04c8c6932f1cd9f8e0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7500,6 +7507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySoldier_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656634130076712377, guid: c4763552c5da067418d0745550712cac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4763552c5da067418d0745550712cac, type: 3}
