@@ -9635,9 +9635,9 @@ MonoBehaviour:
   range: 4
   fireRate: 0.7
   impactForce: 300
-  meleeAudioSource: {fileID: 0}
+  meleeAudioSource: {fileID: 722190474}
   meleeSound: {fileID: 8300000, guid: c373d26e46d092640b232bc72a7eefc4, type: 3}
-  camera: {fileID: 0}
+  camera: {fileID: 1361173276}
 --- !u!114 &630463981
 MonoBehaviour:
   m_ObjectHideFlags: 0
