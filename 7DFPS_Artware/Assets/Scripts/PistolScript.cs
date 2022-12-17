@@ -12,7 +12,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] float impactForce;
 
     [SerializeField] int ammoCapacity;
-    [SerializeField] int currentAmmoInClip;
+    [SerializeField] static int currentAmmoInClip;
     public static int ammoCarriedByPlayer = 0;
     [SerializeField] float reloadTime;
     bool isReloading;
