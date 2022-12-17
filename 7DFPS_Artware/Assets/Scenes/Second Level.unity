@@ -2246,9 +2246,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 69395293}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 69395294}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -2276,6 +2286,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &69395293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 69395292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &69395294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 69395292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &69411268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4184,9 +4206,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 204609294}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 204609295}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -4219,6 +4251,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &204609294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 204609293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &204609295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 204609293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210379897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5316,9 +5360,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 281518563}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 281518564}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -5351,6 +5405,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &281518563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 281518562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &281518564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 281518562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281694069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd1ccb402bb8dea4199d8ddfff3a1bae,
@@ -7007,9 +7073,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 426396634}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 426396635}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -7037,6 +7113,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &426396634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 426396633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &426396635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 426396633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &426661607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7497,6 +7585,8 @@ MonoBehaviour:
   navMesh: {fileID: 241810950}
   enemyShootScript: {fileID: 241810948}
   gunToDrop: {fileID: 0}
+  enemyPistolModel: {fileID: 0}
+  enemySMGModel: {fileID: 0}
 --- !u!136 &442684519
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8128,9 +8218,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 478158139}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 478158140}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -8163,6 +8263,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &478158139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 478158138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &478158140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 478158138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &492342952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5730063405724589414, guid: 74f210566d98520479834e70d6f88bbf,
@@ -10932,9 +11044,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 690170721}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 690170722}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -10962,6 +11084,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &690170721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 690170720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &690170722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 690170720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &701545249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11056,9 +11190,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 701545250}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 701545251}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -11091,6 +11235,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &701545250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 701545249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &701545251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 701545249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &703778605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12025,9 +12181,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 793865818}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 793865819}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -12055,6 +12221,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &793865818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 793865817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &793865819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 793865817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &800626202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6451116142605495884, guid: b706ec5bb7f0fd94c82207fc3f34f105,
@@ -14399,9 +14577,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 963257299}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 963257300}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -14429,6 +14617,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &963257299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 963257298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &963257300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 963257298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &966230615
 GameObject:
   m_ObjectHideFlags: 0
@@ -14485,6 +14685,8 @@ MonoBehaviour:
   navMesh: {fileID: 0}
   enemyShootScript: {fileID: 0}
   gunToDrop: {fileID: 0}
+  enemyPistolModel: {fileID: 0}
+  enemySMGModel: {fileID: 0}
 --- !u!65 &966230618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17998,9 +18200,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1196270034}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1196270035}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -18028,6 +18240,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1196270034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1196270033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1196270035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1196270033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196895417
 GameObject:
   m_ObjectHideFlags: 0
@@ -23965,9 +24189,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1268778631}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1268778632}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -24000,6 +24234,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1268778631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268778630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1268778632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268778630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1270965177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4856592936239993464, guid: 74f210566d98520479834e70d6f88bbf,
@@ -29590,9 +29836,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1322854103}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1322854104}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -29620,6 +29876,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1322854103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322854102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322854104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322854102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1324621374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30308,9 +30576,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1386782105}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1386782106}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -30338,6 +30616,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1386782105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1386782104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1386782106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1386782104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1390401310
 GameObject:
   m_ObjectHideFlags: 0
@@ -37563,9 +37853,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1576142392}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1576142393}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -37598,6 +37898,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1576142392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576142391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1576142393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576142391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1580903284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7438998437682585490, guid: 74f210566d98520479834e70d6f88bbf,
@@ -38475,9 +38787,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1652327840}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1652327841}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -38510,6 +38832,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1652327840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1652327839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1652327841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1652327839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654895934
 GameObject:
   m_ObjectHideFlags: 0
@@ -39097,9 +39431,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1689076686}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1689076687}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -39132,6 +39476,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1689076686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1689076685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1689076687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1689076685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689220879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2605129323378972034, guid: 74f210566d98520479834e70d6f88bbf,
@@ -45508,9 +45864,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 1778934173}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 1778934174}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -45543,6 +45909,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &1778934173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778934172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778934174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778934172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1787675932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48170,9 +48548,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
+      propertyPath: enemySMGModel
+      value: 
+      objectReference: {fileID: 2033918830}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
       propertyPath: isFakeSoldier
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: enemyPistolModel
+      value: 
+      objectReference: {fileID: 2033918831}
     - target: {fileID: 6447595990795853747, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: ammoCount
@@ -48205,6 +48593,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
+--- !u!1 &2033918830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447595991338916884, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2033918829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2033918831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260707810801824349, guid: cca6d160d1803ff41aef8175e70a23b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2033918829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035640656
 GameObject:
   m_ObjectHideFlags: 0
@@ -48536,6 +48936,8 @@ MonoBehaviour:
   navMesh: {fileID: 0}
   enemyShootScript: {fileID: 0}
   gunToDrop: {fileID: 0}
+  enemyPistolModel: {fileID: 0}
+  enemySMGModel: {fileID: 0}
 --- !u!136 &2042727710
 CapsuleCollider:
   m_ObjectHideFlags: 0
