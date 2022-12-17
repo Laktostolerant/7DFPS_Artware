@@ -15,6 +15,9 @@ public class Target : MonoBehaviour
     [SerializeField] NavMeshAgent navMesh;
     [SerializeField] EnemyCombat enemyShootScript;
     [SerializeField] GameObject gunToDrop;
+    [SerializeField] GameObject enemyPistolModel;
+    [SerializeField] GameObject enemySMGModel;
+    EnemyCombat EnemyCombat;
     Vector3 soldierPosition;
 
     private void Start()
@@ -42,13 +45,14 @@ public class Target : MonoBehaviour
             navMesh.enabled = false;
             Destroy(enemyShootScript);
             Instantiate(gunToDrop, soldierPosition, Quaternion.identity);
+            Destroy(enemyPistolModel);
+            Destroy(enemySMGModel);
             isAlive = false;
         }
 
         if (health <= 0 && isHuman && isFakeSoldier)
         {
             Destroy(soldierModel);
-            //doctorModel.SetActive(true); //Fix so it triggers the character models and animations
             Instantiate(dyingDoctor, soldierPosition, Quaternion.identity);
             Debug.Log("You killed an innocent doctor!");
         }

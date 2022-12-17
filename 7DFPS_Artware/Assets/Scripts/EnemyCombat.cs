@@ -65,7 +65,7 @@ public class EnemyCombat : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F))
         {
-            StartCoroutine(Death());
+            //StartCoroutine(Death());
         }
     }
 
