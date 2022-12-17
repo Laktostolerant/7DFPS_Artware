@@ -12282,6 +12282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Round_Chair_Unity (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a73edd89a9e51b4ba4eaae13e0ba866,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73edd89a9e51b4ba4eaae13e0ba866, type: 3}
 --- !u!4 &819129337 stripped
@@ -32151,6 +32156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a73edd89a9e51b4ba4eaae13e0ba866,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a73edd89a9e51b4ba4eaae13e0ba866,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -39410,6 +39420,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Armchair_Unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163234635518781140, guid: 0448d3558f391f24e8440bac6de72145,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0448d3558f391f24e8440bac6de72145, type: 3}
