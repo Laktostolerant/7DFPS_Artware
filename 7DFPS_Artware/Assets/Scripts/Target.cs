@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Target : MonoBehaviour
 {
     bool isAlive;
-    [SerializeField] float health;
+    [SerializeField] public float health;
     [SerializeField] bool isPlayer;
     [SerializeField] bool isHuman;
     [SerializeField] bool isFakeSoldier;
@@ -20,7 +21,7 @@ public class Target : MonoBehaviour
     [SerializeField] GameObject enemyPistolModel;
     [SerializeField] GameObject enemySMGModel;
     [SerializeField] GameObject FakeSoldier;
-    EnemyCombat EnemyCombat;
+    [SerializeField] Text playerHP;
     Vector3 soldierPosition;
 
 
@@ -51,7 +52,6 @@ public class Target : MonoBehaviour
         if (health <= 0 && isHuman && !isFakeSoldier && isAlive)
         {
             animator.SetBool("dead", true);
-            Debug.Log("You killed a normal soldier");
             navMesh.enabled = false;
             Destroy(enemyShootScript);
             Instantiate(gunToDrop, soldierPosition, Quaternion.identity);
@@ -64,7 +64,6 @@ public class Target : MonoBehaviour
         {
             Destroy(soldierModel);
             Instantiate(dyingDoctor, soldierPosition, Quaternion.identity);
-            Debug.Log("You killed an innocent doctor!");
         }
     }
 }
