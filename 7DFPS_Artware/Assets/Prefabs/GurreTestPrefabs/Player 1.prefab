@@ -194,7 +194,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5338,6 +5338,9 @@ MonoBehaviour:
   gunshot: {fileID: 8300000, guid: f0e2ce75b50cf82479eac2a8791e4de5, type: 3}
   reloadSound: {fileID: 8300000, guid: 6b43cb483bc10114eb63cf8c75b21553, type: 3}
   bulletholeInstantiater: {fileID: 3210030005539208301}
+  IgnoreLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &3210030004802861903
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5591,6 +5594,9 @@ MonoBehaviour:
   gunshot: {fileID: 8300000, guid: 04a56e3c6083dbb4d87b80c7e1f6e47f, type: 3}
   reloadSound: {fileID: 8300000, guid: e195ccf0013d6a141a7baa3bac1437fb, type: 3}
   bulletholeInstantiater: {fileID: 3210030005539208301}
+  IgnoreLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &3210030005449200478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6043,7 +6049,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
