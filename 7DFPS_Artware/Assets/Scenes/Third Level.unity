@@ -11732,7 +11732,6 @@ MonoBehaviour:
   fireRate: 0
   impactForce: 50
   ammoCapacity: 15
-  currentAmmoInClip: 0
   reloadTime: 1
   gunModel: {fileID: 2049991185}
   camera: {fileID: 1557874565}
@@ -32296,7 +32295,6 @@ MonoBehaviour:
   fireRate: 10
   impactForce: 90
   ammoCapacity: 30
-  currentAmmoInClip: 0
   reloadTime: 2.5
   gunModel: {fileID: 1756962213}
   camera: {fileID: 1557874565}
@@ -35428,7 +35426,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 80
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
@@ -36137,7 +36135,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 80
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
