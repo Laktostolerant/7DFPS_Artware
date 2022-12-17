@@ -3347,12 +3347,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &161517849 stripped
@@ -3624,12 +3624,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -3812,12 +3812,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -12887,12 +12887,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &848437671 stripped
@@ -16102,12 +16102,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!1001 &1069254088
@@ -16943,12 +16943,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!1001 &1129045676
@@ -29386,12 +29386,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -30646,12 +30646,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &1418848003 stripped
@@ -31222,12 +31222,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &1452987648 stripped
@@ -32823,12 +32823,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -34193,12 +34193,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -35869,12 +35869,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -36514,12 +36514,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     - target: {fileID: 1433474413425558755, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_Name
@@ -38632,12 +38632,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunInHands
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877642611}
     - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: gunToHolster
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 484714470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!1001 &2062598072
