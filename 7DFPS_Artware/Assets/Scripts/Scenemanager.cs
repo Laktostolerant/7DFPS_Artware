@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class Scenemanager : MonoBehaviour
 {
     // to load the next scene
+    [SerializeField] int sceneToLoad;
 
     public void ButtonClick()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneToLoad);
 
     }
     public void Quitgame()
