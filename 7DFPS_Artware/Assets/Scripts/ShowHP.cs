@@ -10,12 +10,12 @@ public class ShowHP : MonoBehaviour
 
     void Start()
     {
-        HP = GameObject.Find("Player (1)").GetComponent<Target>().health;
+        HP = GameObject.Find("Player").GetComponent<Target>().health;
     }
 
     void Update()
     {
-        HP = GameObject.Find("Player (1)").GetComponent<Target>().health;
+        HP = GameObject.Find("Player").GetComponent<Target>().health;
         showHP.text = HP.ToString();
     }
 }
