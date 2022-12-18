@@ -21,7 +21,6 @@ public class Target : MonoBehaviour
     [SerializeField] GameObject enemyPistolModel;
     [SerializeField] GameObject enemySMGModel;
     [SerializeField] GameObject FakeSoldier;
-    [SerializeField] Text playerHP;
     Vector3 soldierPosition;
 
 
@@ -64,6 +63,7 @@ public class Target : MonoBehaviour
         {
             Destroy(soldierModel);
             Instantiate(dyingDoctor, soldierPosition, Quaternion.identity);
+            Instantiate(gunToDrop, soldierPosition, Quaternion.identity);
         }
     }
 }
