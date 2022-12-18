@@ -41,6 +41,8 @@ public class Target : MonoBehaviour
         if (health <= 0 && isPlayer)
         {
             SceneManager.LoadScene(4);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         if (health <= 0 && !isHuman)
