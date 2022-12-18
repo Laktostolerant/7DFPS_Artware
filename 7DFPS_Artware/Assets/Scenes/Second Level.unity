@@ -2219,17 +2219,17 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8835508
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8835508
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8835508
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -2284,7 +2284,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 70
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -2330,6 +2330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: damageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320292120238224371, guid: cca6d160d1803ff41aef8175e70a23b0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.045
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca6d160d1803ff41aef8175e70a23b0, type: 3}
@@ -3369,6 +3374,11 @@ PrefabInstance:
       propertyPath: gunToHolster
       value: 
       objectReference: {fileID: 484714470}
+    - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: lowestAmmoCount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &161517849 stripped
@@ -4175,7 +4185,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -10777,7 +10787,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.2
+      value: -83.1
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -10817,7 +10827,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -13000,6 +13010,11 @@ PrefabInstance:
       propertyPath: gunToHolster
       value: 
       objectReference: {fileID: 484714470}
+    - target: {fileID: 8807494152770653895, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: lowestAmmoCount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485accee3c9634d45a970c339bad39a7, type: 3}
 --- !u!4 &848437671 stripped
@@ -14458,7 +14473,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 45
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -23886,7 +23901,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 497.6
+      value: 513
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -29442,7 +29457,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 497.6
+      value: 465.48
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -29452,7 +29467,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70.5
+      value: -66.14
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -35790,7 +35805,7 @@ PrefabInstance:
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: health
-      value: 45
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1727711694733658561, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -37182,7 +37197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf56b98a0a0a8e45a0bece3fddf4d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 6
   range: 5000
   fireRate: 0
   impactForce: 50
@@ -38490,7 +38505,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 512.68
+      value: 505.01
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
@@ -38500,7 +38515,7 @@ PrefabInstance:
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.2
+      value: -66.07
       objectReference: {fileID: 0}
     - target: {fileID: 1727711693813944153, guid: cca6d160d1803ff41aef8175e70a23b0,
         type: 3}

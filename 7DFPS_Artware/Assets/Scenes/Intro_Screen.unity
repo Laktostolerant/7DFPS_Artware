@@ -1289,7 +1289,7 @@ MonoBehaviour:
     Walk:
     W,A,S,D  Sprint: Hold left shift   Look around: Mouse   Crouch: Left control
     or C   Shoot: Left mouse button   Zoom: Right mouse button   Reload: R   Melee:
-    V'
+    V  Switch weapons : Scroll wheel'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
