@@ -53,6 +53,26 @@ public class DoorScript : MonoBehaviour
 
             StartCoroutine(SceneTransition());
         }
+
+        if (isPlayerCloseEnough && Input.GetKeyDown(KeyCode.E) && transitionaryDoor && sceneToTransitionTo == 5)
+        {
+            opened = !opened;
+
+            changedScene = !changedScene;
+
+            animator.SetBool("Opened", !opened);
+
+            transitionAnimator.SetTrigger("SceneChange");
+
+            infoText.SetActive(false);
+
+            Destroy(triggerCollider);
+
+            StartCoroutine(SceneTransition());
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }        
     }
 
     IEnumerator SceneTransition()
