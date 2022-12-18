@@ -3296,6 +3296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3646,6 +3651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!4 &180826616 stripped
@@ -3833,6 +3843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
@@ -12912,6 +12927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -16137,6 +16157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -16975,6 +17000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
@@ -29527,6 +29557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!4 &1335184589 stripped
@@ -30725,6 +30760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -31298,6 +31338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
@@ -32986,6 +33031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!1001 &1594550162
@@ -34377,6 +34427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
@@ -36065,6 +36120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!1 &1804535154
@@ -36709,6 +36769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
@@ -38763,6 +38828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}

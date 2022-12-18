@@ -824,6 +824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlockPickup (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: m_RootOrder
@@ -2724,6 +2729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!1001 &299274701
@@ -4148,6 +4158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlockPickup (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: m_RootOrder
@@ -4802,6 +4817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
@@ -12176,6 +12196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlockPickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
       propertyPath: m_RootOrder
@@ -12871,6 +12896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
@@ -14584,6 +14614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
@@ -16995,6 +17030,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
@@ -26746,6 +26786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ec0e39fa83c24ba312fd6c44076b7, type: 3}
 --- !u!1 &1560642358
@@ -29188,6 +29233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MP5Pickup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1472114262147600293, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30130,6 +30180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653889, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}

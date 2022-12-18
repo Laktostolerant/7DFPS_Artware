@@ -817,6 +817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10023,6 +10028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13391,6 +13401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
@@ -23867,6 +23882,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23899,6 +23919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlockPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8807494152770653888, guid: 485accee3c9634d45a970c339bad39a7,
         type: 3}
@@ -27867,6 +27892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -30355,6 +30385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
@@ -38133,6 +38168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -38911,6 +38951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MP5Pickup (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1433474413425558766, guid: 104ec0e39fa83c24ba312fd6c44076b7,
         type: 3}
